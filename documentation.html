@@ -72,23 +72,23 @@
 		    <nav id="docs-nav" class="docs-nav navbar">
 			    <ul class="section-items list-unstyled nav flex-column pb-3">
 				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Documentation</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Why Navycut</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Fullstack Support</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Ridiculously Fast</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">Getting Started</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Tutorial</a></li>
+				    <!-- <li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">Ridiculously Fast</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-4">Fully Loaded</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-5">Reassuringly secure.</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">Incredibly versatile.</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-6">Incredibly versatile.</a></li> -->
 				    <!-- <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-2"><span class="theme-icon-holder mr-2"><i class="fas fa-arrow-down"></i></span>Installation</a></li> -->
 				    
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder mr-2"><i class="fas fa-box"></i></span>The Model Layer</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Object relational mapper</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Urls and Views</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Templates</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">Forms</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">Authentication</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-6">Admin</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-7">Internationalization</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-8">Security</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Introduction to Models</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Field Types</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">QuerySets</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">Accessing related objects</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">Introduction to Migrations</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-6">Connectivity & Supported DB</a></li>
+					<li class="nav-item"><a class="nav-link scrollto" href="#item-3-7">Advanced Features</a></li>
+					<!-- <li class="nav-item"><a class="nav-link scrollto" href="#item-3-8">Security</a></li> -->
 				    
 					<li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder mr-2"><i class="fas fa-cogs"></i></span>The View Layer</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">The Model Layer</a></li>
@@ -133,20 +133,20 @@
 						
 				    </header>
 				    <section class="docs-section" id="item-1-1">
-						<h2 class="section-heading">Why Navycut</h2>
-						<p>Navycut provides the Flask based fullstack web development platform to create an interactive website instantly.</p>
+						<h2 class="section-heading">Getting Started</h2>
+						<p>This is the base documentation to know the Navycut project. Please read all teh specs very carefully before starting it.</p>
                        
 					</section>
 					
 					<section class="docs-section" id="item-1-2">
-						<h2 class="section-heading">Fullstack Support</h2>
-						<p>Navycut has the Flask based backend system as well as the Jinja2 Based template rendering system to design the frontend.</p>
+						<h2 class="section-heading">Tutorial</h2>
+						<p>desc for Tutorial</p>
 					</section><!--//section-->
 					
-					<section class="docs-section" id="item-1-3">
+					<!-- <section class="docs-section" id="item-1-3">
 						<h2 class="section-heading">Ridiculously Fast</h2>
 						<p>Navycut was designed to help developers take applications from concept to completion as quickly as possible.</p>
-					</section><!--//section-->
+					</section>
 					
 					<section class="docs-section" id="item-1-4">
 						<h2 class="section-heading">Fully Loaded</h2>
@@ -160,7 +160,7 @@
 					<section class="docs-section" id="item-1-6">
 						<h2 class="section-heading">Incredibly Versatile</h2>
 						<p>Companies, organizations and governments have used Django to build all sorts of things — from content management systems to social networks to scientific computing platforms.</p>
-					</section>
+					</section> -->
 					
 			    </article>
 			    
@@ -220,37 +220,62 @@ python setup.py install
 				    <header class="docs-header">
 					    <h1 class="docs-heading">The Model Layer</h1>
 					    <section class="docs-intro">
-						    <p>The basic introduction about the stack and features of Navyvut project.</p>
+						    <p>A model is the single, definitive source of information about your data. It contains the essential fields and behaviors of the data you’re storing. Generally, each model maps to a single database table.
+								<br><br>The Basic details:
+								<ul>
+									<li>Each model is a Python class that subclasses <strong>navycut.orm.sqla.sql.Model</strong>.</li>
+									<li>Each attribute of the model represents a database field.</li>
+									<li>With all of this, Navycut gives you an automatically-generated database-access API</li>
+									<li>It's internally using the SqlAlchemy orm module. So all the SqlAlchemy features are available.</li>
+								</ul>
+							</p>
 						</section>
 				    </header>
 				     <section class="docs-section" id="item-3-1">
-						<h2 class="section-heading">Object relational mapper</h2>
-						<p>Deﬁne your data models entirely in Python using SQLAlchemy. You get a rich, dynamic database-access API for free — but you can still write SQL if needed.</p>
+						<h2 class="section-heading">Introductions to Models</h2>
+						<p>
+							Check the below mentioned quick example to know more about Navycut models layer.
+							<br><br>Quick Example:
+						</p>
 						<div class="docs-code-block">
 							<pre class="shadow-lg rounded">
 								<code class="python hljs">
 from navycut.orm import sql
 
-class Band(sql.Model):
-    """A model of a rock band."""
-    name = sql.fields.Char(max_length=200)
-    can_rock = sql.fields.Boolean(default=True)
-
-
-class Member(sql.Model):
-    """A model of a rock band member."""
-    name = sql.fields.Char(help_text="Member's name", max_length=200)
-    instrument = sql.fields.Char(choices=(
-            ('g', "Guitar"),
-            ('b', "Bass"),
-            ('d', "Drums"),
-        ),
-        max_length=1
-    )
-    band = models.ForeignKey("Band")
+class Person(sql.Model):
+    first_name = sql.fields.Char(max_length=30)
+    last_name = sql.fields.Char(max_length=30)
 								</code>
 							</pre>
 						</div>
+						<p>first_name and last_name are fields of the model. Each field is specified as a class attribute, and each attribute maps to a database column.</p>
+						<p>The above Person model would create a database table like this:</p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
+								<code class="sql hljs">
+CREATE TABLE myapp_person (
+    "id" serial NOT NULL PRIMARY KEY,
+    "first_name" varchar(30) NOT NULL,
+    "last_name" varchar(30) NOT NULL
+);
+								</code>
+							</pre>
+						</div>
+						<p>Using Models:</p><br>
+						<p>Once you have defined your models, you need to tell Navycut you’re going to use those models. Do this by editing your settings file and changing the <b>INSTALLED_APPS</b> setting to add the name of the module that contains your models.py.
+						For example, if the models for your application live in the module myapp.models (the package structure that is created for an application by the manage.py createapp script), <b>INSTALLED_APPS</b> should read, in part:</p>
+						<div class="docs-code-block">
+							<pre class="shadow-lg rounded">
+								<code class="python hljs">
+INSTALLED_APPS = [
+    #...
+    'myapp.sister.MyappConfig',
+    #...
+]
+								</code>
+							</pre>
+						</div>
+						<p>When you add new apps to <b>INSTALLED_APPS</b>, be sure to run <b>manage.py migrate</b>, optionally making migrations for them first with <b>manage.py makemigrations</b>.</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-3-2">
