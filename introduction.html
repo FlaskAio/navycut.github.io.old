@@ -249,7 +249,7 @@ class Member(sql.Model):
         ),
         max_length=1
     )
-    band = models.ForeignKey("Band")
+    band = sql.fields.ForeignKey("Band")
 								</code>
 							</pre>
 						</div>
